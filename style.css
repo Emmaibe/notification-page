@@ -45,14 +45,15 @@ html:focus-within {
 html,
 body {
   height: 100%;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: var(--fs-100);
-  font-weight: var(--fw-500);
 }
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: var(--fs-100);
+  font-weight: var(--fw-500);
+  color: var(--clr-neutral-600);
 }
 
 /* A elements that don't have a class get default styles */
@@ -93,6 +94,10 @@ svg {
   color: var(--clr-primary-blue);
 }
 
+.bg-clr-primary-blue {
+  background-color: var(--clr-primary-blue);
+}
+
 .clr-neutral-100 {
   color: var(--clr-neutral-100);
 }
@@ -105,6 +110,9 @@ svg {
 }
 .clr-neutral-300 {
   background-color: var(--clr-neutral-300);
+}
+.clr-neutral-400 {
+  background-color: var(--clr-neutral-400);
 }
 .clr-neutral-400 {
   color: var(--clr-neutral-400);
@@ -131,4 +139,65 @@ svg {
 }
 .fw-800 {
   font-weight: var(--fw-800);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* general styling */
+
+main {
+  max-width: 1340px;
+  margin: auto;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 0.5rem 2rem 0.2rem 2rem;
+  border-radius: 15px;
+}
+
+header {
+  justify-content: space-between;
+  padding: 2rem 0 1rem 0;
+}
+
+.quantity {
+  padding: 0 0.6rem;
+  border-radius: 5px;
+}
+
+.user {
+  font-weight: var(--fw-800);
+  color: var(--clr-neutral-700);
+}
+
+.message-time {
+  color: var(--clr-neutral-500);
+}
+
+.notification {
+  padding: 1rem;
+}
+
+.notification img {
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.private-message {
+  align-items: flex-start;
+}
+
+.message-content {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 0.1px solid var(--clr-neutral-500);
+  border-radius: 5px;
 }
