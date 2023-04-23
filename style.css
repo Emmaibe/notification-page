@@ -17,6 +17,13 @@
   --fw-800: 800;
 }
 
+@media (max-width: 50em) {
+  :root {
+    --fs-100: 0.875rem;
+    --fs-200: 1rem;
+  }
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -150,12 +157,13 @@ svg {
 /* general styling */
 
 main {
-  max-width: 1340px;
-  margin: auto;
-  /* height: 100%; */
+  /* max-width: 1340px;
+  margin: auto; */
+  height: 100%;
   display: flex;
   align-items: center;
 }
+
 .container {
   max-width: 720px;
   margin: auto;
@@ -166,6 +174,11 @@ main {
 header {
   justify-content: space-between;
   padding: 2rem 0 1rem 0;
+}
+
+.nav {
+  gap: 0.5rem;
+  align-items: flex-start;
 }
 
 .quantity {
@@ -183,8 +196,14 @@ header {
 }
 
 .notification {
-  padding: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  align-items: flex-start;
 }
+
+/* :where(article .notification :not(:first-of-type)) {
+  margin-top: 0.7rem;
+} */
 
 .notification img {
   max-width: 3rem;
@@ -210,4 +229,37 @@ header {
 .group {
   color: var(--clr-primary-blue);
   font-weight: var(--fw-800);
+}
+
+.notification[data-type="unread"] {
+  background-color: var(--clr-neutral-200);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.red-dot {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+@media (max-width: 50em) {
+  .container {
+    padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+  }
+
+  header {
+    padding: 1rem 0 0.5rem 0;
+  }
+
+  .notification,
+  .picture-notification div:first-of-type {
+    align-items: flex-start;
+  }
+
+  .notification img {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
 }
