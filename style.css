@@ -10,7 +10,7 @@
   --clr-neutral-600: hsl(219, 12%, 42%);
   --clr-neutral-700: hsl(224, 21%, 14%);
 
-  --fs-100: 1rem;
+  --fs-100: 0.9375rem;
   --fs-200: 1.125rem;
 
   --fw-500: 500;
@@ -200,4 +200,14 @@ header {
   padding: 1rem;
   border: 0.1px solid var(--clr-neutral-500);
   border-radius: 5px;
+}
+
+.picture-notification {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group {
+  color: var(--clr-primary-blue);
+  font-weight: var(--fw-800);
 }
