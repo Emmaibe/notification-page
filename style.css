@@ -173,7 +173,7 @@ main {
 
 header {
   justify-content: space-between;
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0;
 }
 
 .nav {
@@ -184,6 +184,10 @@ header {
 .quantity {
   padding: 0 0.6rem;
   border-radius: 5px;
+}
+
+.mark-read {
+  cursor: pointer;
 }
 
 .user {
@@ -199,6 +203,7 @@ header {
   margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 /* :where(article .notification :not(:first-of-type)) {
@@ -237,11 +242,9 @@ header {
   padding: 1rem;
 }
 
-.red-dot {
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
+.notification[data-type="unread"] .note-content p::after {
+  content: url(assets/images/red-note.png);
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 50em) {
