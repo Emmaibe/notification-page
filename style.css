@@ -190,6 +190,13 @@ header {
   cursor: pointer;
 }
 
+.mark-read:hover,
+.group:hover,
+.user:hover,
+.posts:hover {
+  color: var(--clr-primary-blue);
+}
+
 .user {
   font-weight: var(--fw-800);
   color: var(--clr-neutral-700);
@@ -225,6 +232,11 @@ header {
   padding: 1rem;
   border: 0.1px solid var(--clr-neutral-500);
   border-radius: 5px;
+}
+
+.message-content:hover {
+  border: 0.1px solid var(--clr-neutral-400);
+  background-color: var(--clr-neutral-400);
 }
 
 .picture-notification {
