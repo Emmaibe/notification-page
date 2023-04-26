@@ -250,17 +250,19 @@ header {
   font-weight: var(--fw-800);
 }
 
-.notification[aria-live="true"] {
+.unread {
   background-color: var(--clr-neutral-200);
 }
 
-.notification[aria-live="false"] {
+/* .notification[data-status="read"] {
   background-color: var(--clr-neutral-100);
-}
+} */
 
-.notification[aria-live="true"] .note-content p::after {
+.unread .note-content p::after {
   content: url(assets/images/red-note.png);
   margin-left: 0.5rem;
+  width: 5px;
+  height: 5px;
 }
 
 @media (max-width: 50em) {
