@@ -11,8 +11,8 @@ markRead.addEventListener("click", () => {
 
 notifications.forEach((notification) => {
   notification.addEventListener("click", () => {
+    if (!notification.classList.contains("unread")) return;
     notification.classList.remove("unread");
-    const newQnty = document.querySelectorAll(".unread");
-    unreadQnty.innerText = newQnty.length;
+    unreadQnty.innerText = unreadQnty.innerText - 1;
   });
 });
